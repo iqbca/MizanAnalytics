@@ -1,16 +1,5 @@
-import pandas as pd
+from app import MizanAnalytics
 
-from database.db_connection import engine
+app = MizanAnalytics()
 
-print("="*50)
-print("MIZAN ANALYTICS PLATFORM")
-print("="*50)
-
-query = """
-SELECT *
-FROM Portfolio
-"""
-
-df = pd.read_sql(query, engine)
-
-print(df)
+app.run()
